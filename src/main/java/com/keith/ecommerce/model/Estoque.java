@@ -8,24 +8,21 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.math.BigDecimal;
-import java.util.Objects;
-
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-@Table(name = "produto")
-public class Produto {
+@Table(name = "estoque")
+public class Estoque {
 
-    @EqualsAndHashCode.Exclude
+    @EqualsAndHashCode.Include
     @Id
     private Integer id;
 
-    private String nome;
+    @Column(name = "produto_id")
+    private Integer produtoId;
 
-    private String descricao;
+    private Integer quantidade;
 
-    private BigDecimal preco;
 
 }

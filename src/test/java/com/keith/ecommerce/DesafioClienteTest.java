@@ -1,6 +1,7 @@
 package com.keith.ecommerce;
 
 import com.keith.ecommerce.model.Cliente;
+import com.keith.ecommerce.model.SexoCliente;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -9,8 +10,9 @@ public class DesafioClienteTest extends EntityManagerTest{
     @Test
     public void inserirRegistro() {
         Cliente cliente = new Cliente();
-        cliente.setId(3);
+//        cliente.setId(3);
         cliente.setNome("Felicidade Biengo Dimeni");
+         cliente.setSexo(SexoCliente.FEMININO);
 
         entityManager.getTransaction().begin();
         entityManager.persist(cliente);
@@ -39,8 +41,9 @@ public class DesafioClienteTest extends EntityManagerTest{
         Cliente cliente = new Cliente();
         cliente.setId(1);
         cliente.setNome("Mauricio Dimeni");
+        cliente.setSexo(SexoCliente.MASCULINO);
 
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction().begin   ();
         entityManager.merge(cliente);
         entityManager.getTransaction().commit();
         entityManager.clear();

@@ -17,12 +17,13 @@ public class Pedido {
 
     @EqualsAndHashCode.Include
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "data_pedido")
     private LocalDateTime dataPedido;
 
-    @Column(name = "data_nascimento")
+    @Column(name = "data_conclusao")
     private LocalDateTime dataConclusao;
 
     @Column(name = "nota_fiscal")
@@ -32,4 +33,9 @@ public class Pedido {
 
     @Enumerated(EnumType.STRING)
     private StatusPedido status;
+
+    @Embedded
+    private EnderecoEntregaPedido enderecoEntrega;
+
+
 }

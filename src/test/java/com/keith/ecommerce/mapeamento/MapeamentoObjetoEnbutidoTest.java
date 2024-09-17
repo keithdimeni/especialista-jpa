@@ -28,7 +28,7 @@ public class MapeamentoObjetoEnbutidoTest extends EntityManagerTest {
 //        pedido.setId(1);
         pedido.setDataPedido(LocalDateTime.now());
         pedido.setDataConclusao(LocalDateTime.now());
-        pedido.setNotaFiscal(876897988);
+//        pedido.setNotaFiscal(876897988);
         pedido.setTotal(BigDecimal.valueOf(600));
         pedido.setStatus(StatusPedido.PAGO);
         pedido.setEnderecoEntrega(enderecoEntrega);

@@ -1,11 +1,12 @@
-package com.keith.ecommerce;
+package com.keith.ecommerce.inicioComJpa;
 
+import com.keith.ecommerce.EntityManagerTest;
 import com.keith.ecommerce.model.Cliente;
 import com.keith.ecommerce.model.SexoCliente;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class DesafioClienteTest extends EntityManagerTest{
+public class DesafioClienteTest extends EntityManagerTest {
 
     @Test
     public void inserirRegistro() {

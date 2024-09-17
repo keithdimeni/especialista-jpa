@@ -1,5 +1,6 @@
-package com.keith.ecommerce;
+package com.keith.ecommerce.inicioComJpa;
 
+import com.keith.ecommerce.EntityManagerTest;
 import com.keith.ecommerce.model.Produto;
 import org.junit.jupiter.api.*;
 
